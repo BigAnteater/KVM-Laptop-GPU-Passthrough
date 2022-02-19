@@ -8,7 +8,7 @@ echo 0 > /sys/class/vtconsole/vtcon1/bind
 echo efi-framebuffer.0 > /sys/bus/platform/drivers/efi-framebuffer/unbind
 
 # avoid race condition (racist)
-sleep 2
+sleep 5
 
 # detach the gpu
 virsh nodedev-detach pci_0000_10_00_0
