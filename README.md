@@ -80,7 +80,7 @@ chmod +x vm-config.sh
 6) Download the Windows 10 ISO from EvilCorp- Microsoft.
 7) Add your Windows 10 ISO to the VM
 ![Screenshot_select-area_20220220114135](https://user-images.githubusercontent.com/77298458/154861086-78293087-01cc-4c7a-9e82-f8410222568b.png)
-8) Lastly, add a display spice to the VM so we can install windows.
+8) Lastly, add a display spice to the VM so we can install windows later.
 ![Screenshot_select-area_20220220114449](https://user-images.githubusercontent.com/77298458/154861218-d20235f4-a1b6-4cf9-9b99-7bf8c2636338.png)
 
 # QEMU Hooks
@@ -100,3 +100,5 @@ sudo ./hooks_config.sh
 If you get an error saying something along the lines of: "could not remove /etc/libvirt/hooks no such file or directory", it's not an error it is intended.
 
 # Installing Windows + Drivers
+
+Once you have finished settings up the hooks and VM, you are going to want to turn the vm on. If you are switched to your Nvidia card on optimus manager, switch to your integrated graphics. Installing windows should be pretty simple. Do the install from the display spice window on the VM.
