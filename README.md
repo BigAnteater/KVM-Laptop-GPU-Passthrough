@@ -61,21 +61,27 @@ Creating the virtual machine can be done in multiple different ways. I am doing 
 
 To create the virtual machine, we will have to follow some pretty easy steps.
 
-1) Open up the fancy new application installed on your computer named virt-manager
-![Screenshot_select-area_20220220073205](https://user-images.githubusercontent.com/77298458/154850362-1f7e57cb-1b7f-4786-acf1-6de299d437b3.png)
-2) Create a new virtual machine under local install media
-![Screenshot_select-area_20220220073407](https://user-images.githubusercontent.com/77298458/154850467-975ece75-e61c-4763-922e-7504f556d0b5.png)
-3) Download the windows 10/11 ISO from EvilCorp- sorry I meant Microsoft 🤮
-4) Give the VM the ISO that you just downloaded
-![Screenshot_select-area_20220220075046](https://user-images.githubusercontent.com/77298458/154851265-f54e5342-8799-41a6-ad6b-64fce214c9b8.png)
-5) You can allocate ram & stuff but I would do that some time later.
-6) Create a disk for your vm. I reccomend at least 60 gigabytes but allocate more if you want to get some stuff done.
-7) Name the VM win10 and make sure to customize configuration before install.
-![Screenshot_select-area_20220220075930](https://user-images.githubusercontent.com/77298458/154851718-c4a122da-b711-4e0b-9860-6b963500e0d7.png)
-8) Then make sure you are going to want to make sure your firmware is set to OVMF_Code.FD
-![Screenshot_select-area_20220220080101](https://user-images.githubusercontent.com/77298458/154852909-c9aab1b9-b329-4b40-a860-3f9e81ed2836.png)
-7) Finally, remove the tablet, sound ich9, console 1, and both usb directors.
-8) Then press begin installation and go through a normal windows installation.
+I have yet again created a script to set up the vm for you
+
+1) Mark the script as executable
+```
+chmod +x vm-config.sh
+```
+2) Run the script
+```
+./vm-config.sh
+```
+3) Your VM is now set up! Just kidding it isn't. Open up virt manager and highlight the win10 VM and click open.
+![Screenshot_select-area_20220220111100](https://user-images.githubusercontent.com/77298458/154859937-ad44edf7-42c8-4f4e-a96e-8396b7d163a1.png)
+4) I put 2 PCI devices related to your GPU in the VM but you might have 4. To check this, click on "add hardware" > "PCI host device" and add any other PCI devices in the 0000:01:00.* group. Rinse and repeat until all NVIDIA PCI devices are in the VM. (suggest better wording for this please)
+![Screenshot_select-area_20220220111800](https://user-images.githubusercontent.com/77298458/154860600-dfedf365-79ec-46ea-bcf9-127dfd0ca7e1.png)
+5) Add your USB keyboard and mouse to the VM
+![Screenshot_select-area_20220220113108](https://user-images.githubusercontent.com/77298458/154860878-78b195ce-e066-45c0-a0bc-dcfc9fbb12f0.png)
+6) Download the Windows 10 ISO from EvilCorp- Microsoft.
+7) Add your Windows 10 ISO to the VM
+![Screenshot_select-area_20220220114135](https://user-images.githubusercontent.com/77298458/154861086-78293087-01cc-4c7a-9e82-f8410222568b.png)
+8) Lastly, add a display spice to the VM so we can install windows.
+![Screenshot_select-area_20220220114449](https://user-images.githubusercontent.com/77298458/154861218-d20235f4-a1b6-4cf9-9b99-7bf8c2636338.png)
 
 # QEMU Hooks
 
@@ -92,3 +98,5 @@ chmod +x hooks_config.sh
 sudo ./hooks_config.sh
 ```
 If you get an error saying something along the lines of: "could not remove /etc/libvirt/hooks no such file or directory", it's not an error it is intended.
+
+# Installing Windows + Drivers
