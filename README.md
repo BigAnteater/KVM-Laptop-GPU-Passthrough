@@ -102,3 +102,6 @@ If you get an error saying something along the lines of: "could not remove /etc/
 # Installing Windows + Drivers
 
 Once you have finished settings up the hooks and VM, you are going to want to turn the vm on. If you are switched to your Nvidia card on optimus manager, switch to your integrated graphics. Installing windows should be pretty simple. Do the install from the display spice window on the VM.
+![Screenshot_select-area_20220220145030](https://user-images.githubusercontent.com/77298458/154869073-8d13f4a1-a400-42a4-88a7-49b1c43d1fce.png)
+Once your Windows is done installing, install the Nvidia driver for your laptop.
+![Screenshot_select-area_20220220154225](https://user-images.githubusercontent.com/77298458/154869630-4000737f-3b2a-4e57-af5a-b069b8f5722b.png)
