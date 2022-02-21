@@ -105,3 +105,12 @@ Once you have finished settings up the hooks and VM, you are going to want to tu
 ![Screenshot_select-area_20220220145030](https://user-images.githubusercontent.com/77298458/154869073-8d13f4a1-a400-42a4-88a7-49b1c43d1fce.png)
 Once your Windows is done installing, install the Nvidia driver for your laptop.
 ![Screenshot_select-area_20220220154225](https://user-images.githubusercontent.com/77298458/154869630-4000737f-3b2a-4e57-af5a-b069b8f5722b.png)
+Some people may experience an issue where despite having the driver installed, there will still be no video output. This can be simply fixed by opening the app (on windows) called Turn Windows Features on or off. Then just enable and apply the feature "Hyper-V". After this, everything should be all set up and good to go! You can play around with your VM's settings (passing through USB/audio devices/Changing specs) but I set them to the optimal settings.
+
+# Closing Notes
+
+There is a lot more that you can do with this guide, but I felt that I had to make one on how to do this just to get it out there. I spent many hours browsing reddit/youtube/github and I never found a guide that actaully made sense. After compiling a lot of information from multiple different reddit posts on [r/vfio](https://reddit.com/r/vfio) from many different helpful users, I finally made this guide.
+
+There are many different programs that you can pair with this guide to make it better like [looking glass](https://looking-glass.io) or [scream](https://github.com/duncanthrax/scream) but I won't go over this for the sake of my sanity.
+
+Finally, feel free to edit, suggest, and give feedback to my programs/guides, and have a nice day.
