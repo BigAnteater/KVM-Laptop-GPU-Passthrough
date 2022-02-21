@@ -49,7 +49,7 @@ chmod +x libvirt_config.sh
 ```
 2) Run the script as a superuser
 ```
-sudo ./libirt_config.sh
+sudo ./libvirt_config.sh
 ```
 Now your Libvirt is good to go!
 
