@@ -77,7 +77,7 @@ chmod +x vm-config.sh
 ![Screenshot_select-area_20220220111800](https://user-images.githubusercontent.com/77298458/154860600-dfedf365-79ec-46ea-bcf9-127dfd0ca7e1.png)
 5) Add your USB keyboard and mouse to the VM
 ![Screenshot_select-area_20220220113108](https://user-images.githubusercontent.com/77298458/154860878-78b195ce-e066-45c0-a0bc-dcfc9fbb12f0.png)
-6) Download the Windows 10 ISO from EvilCorp- Microsoft.
+6) Download the Windows 10 ISO from EvilCorp- sorry I meant Microsoft.
 7) Add your Windows 10 ISO to the VM
 ![Screenshot_select-area_20220220114135](https://user-images.githubusercontent.com/77298458/154861086-78293087-01cc-4c7a-9e82-f8410222568b.png)
 8) Lastly, add a display spice to the VM so we can install windows later.
